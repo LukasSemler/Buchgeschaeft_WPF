@@ -26,6 +26,7 @@ namespace Bookstore_WPF
         public MainWindow()
         {
             InitializeComponent();
+            Console.WriteLine();
             
         }
 
