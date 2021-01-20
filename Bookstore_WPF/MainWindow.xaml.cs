@@ -23,13 +23,82 @@ namespace Bookstore_WPF
     {
 
         public List<Item> ListeItems = new List<Item> { };
+
+        
         public MainWindow()
         {
             InitializeComponent();
-            Console.WriteLine();
+
+            Combox_Category.ItemsSource = Enum.GetValues(typeof(Category));
+            
             
         }
 
-       
+        private void Button_Create_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (RadioButton_Book.IsChecked == true)
+                {
+                    string Titel = TextBox_Title.Text;
+                    decimal Price = Convert.ToDecimal(TextBox_Price.Text);
+                    int Stock = Convert.ToInt32(TextBox_STock.Text);
+                    string Author = TextBox_Author.Text;
+                    string ISBN = TextBox_ISBN.Text;
+                    Category category = (Category)Combox_Category.SelectedItem;
+
+                  
+
+                    Book B1 = new Book(Price, Stock, Titel, Author, ISBN, category);
+                    ListeItems.Add(B1);
+                    foreach (var item in ListeItems)
+                    {
+                        ListBox_Ausgabe.Items.Add(item);
+                    }
+                    
+
+                }
+                else if(RadioButton_Audiobook.IsChecked == true)
+                {
+                    string Titel = TextBox_Title.Text;
+                    decimal Price = Convert.ToDecimal(TextBox_Price.Text);
+                    int Stock = Convert.ToInt32(TextBox_STock.Text);
+                    string Author = TextBox_Author.Text;
+                    string ISBN = TextBox_ISBN.Text;
+                    int duration = Convert.ToInt32(TextBox_Duration.Text);
+                    Category category = (Category)Combox_Category.SelectedItem;
+
+
+
+                    AudioBook A1 = new AudioBook(Price, Stock, Titel, Author, ISBN, duration, category);
+                    ListeItems.Add(A1);
+                    foreach (var item in ListeItems)
+                    {
+                        ListBox_Ausgabe.Items.Add(item);
+                    }
+                }
+                else if (RadioButton_Newspaper.IsChecked == true)
+                {
+                    string Titel = TextBox_Title.Text;
+                    decimal Price = Convert.ToDecimal(TextBox_Price.Text);
+                    int Stock = Convert.ToInt32(TextBox_STock.Text);
+                    DateTime date = (DateTime)DatePicker_Date.SelectedDate;
+
+
+
+                    Newspaper N1 = new Newspaper(Price, Stock, Titel, date);
+                    ListeItems.Add(N1);
+                    foreach (var item in ListeItems)
+                    {
+                        ListBox_Ausgabe.Items.Add(item);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

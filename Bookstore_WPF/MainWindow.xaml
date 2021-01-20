@@ -25,18 +25,18 @@
         <Label Content="ISBN:" HorizontalAlignment="Left" Margin="29,224,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="TextBox_ISBN" HorizontalAlignment="Left" Height="22" Margin="111,227,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207"/>
         <Label Content="Catgegory:" HorizontalAlignment="Left" Margin="20,255,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="TextBox_Category" HorizontalAlignment="Left" Height="22" Margin="111,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207"/>
         <Label Content="Duration:" HorizontalAlignment="Left" Margin="20,286,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="TextBox_Duration" HorizontalAlignment="Left" Height="22" Margin="111,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207"/>
         <Label Content="Date of Issue:" HorizontalAlignment="Left" Margin="10,317,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="TextBox_Date_of_Issue" HorizontalAlignment="Left" Height="22" Margin="111,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207"/>
-        <Button x:Name="Button_Create" Content="Button" HorizontalAlignment="Left" Height="24" Margin="10,374,0,0" VerticalAlignment="Top" Width="308"/>
+        <Button x:Name="Button_Create" Content="Create&#xD;&#xA;" HorizontalAlignment="Left" Height="24" Margin="10,374,0,0" VerticalAlignment="Top" Width="308" Click="Button_Create_Click"/>
         <Label Content="Amount:" HorizontalAlignment="Left" Margin="367,374,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="TextBox_Amount" HorizontalAlignment="Left" Height="22" Margin="428,378,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="97"/>
         <Button x:Name="Button_Purchase" Content="Purchase" HorizontalAlignment="Left" Height="24" Margin="540,378,0,0" VerticalAlignment="Top" Width="58"/>
         <Button x:Name="Button_Sell" Content="Sell" HorizontalAlignment="Left" Height="24" Margin="603,378,0,0" VerticalAlignment="Top" Width="58"/>
         <Button x:Name="Button_Delete" Content="Delete" HorizontalAlignment="Left" Height="24" Margin="666,378,0,0" VerticalAlignment="Top" Width="58"/>
         <Button x:Name="Button_Delete_Copy" Content="Close" HorizontalAlignment="Left" Height="24" Margin="729,378,0,0" VerticalAlignment="Top" Width="58"/>
+        <DatePicker x:Name="DatePicker_Date" HorizontalAlignment="Left" Height="25" Margin="111,318,0,0" VerticalAlignment="Top" Width="207"/>
+        <ComboBox x:Name="Combox_Category" HorizontalAlignment="Left" Height="20" Margin="111,261,0,0" VerticalAlignment="Top" Width="207" />
 
     </Grid>
 </Window>
