@@ -178,14 +178,14 @@ namespace Bookstore_WPF
 
                 foreach (var item in ListeItems)
                 {
-                    if (ListBox_Ausgabe.SelectedItem.ToString() == item.ToString())
+                    if (((Item)ListBox_Ausgabe.SelectedItem).Titel == item.Titel)
                     {
                         ListeItems.Remove(item);
                     }
                 }
                 ListBox_Ausgabe.Items.Refresh();
 
-                MessageBox.Show("Erfolgreich geköscht");
+                MessageBox.Show("Erfolgreich gelöscht");
 
                 foreach (var item in ListeItems)
                 {
@@ -242,6 +242,22 @@ namespace Bookstore_WPF
 
             Clear();
             ListBox_Ausgabe.Items.Refresh();
+        }
+
+        private void Button_Search_Click(object sender, RoutedEventArgs e)
+        {
+            string suche = TextBox_Search.Text.ToLower();
+
+            if ((suche == " " || suche == "") && RadioButton_All.IsChecked == true)
+            {
+
+            }
+            else if(RadioButton_Book.IsChecked == true)
+            {
+
+            }
+
+            
         }
     }
 }

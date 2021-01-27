@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bookstore_WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" MinWidth="800" MinHeight="450" ResizeMode="NoResize">
     <Grid Background="#FF4B4B4B">
         <RadioButton x:Name="RadioButton_All" Content="All" HorizontalAlignment="Left" Margin="29,45,0,0" VerticalAlignment="Top"/>
         <RadioButton x:Name="RadioButton_Audiobook" Content="Audiobook" HorizontalAlignment="Left" Margin="111,45,0,0" VerticalAlignment="Top" />
         <RadioButton x:Name="RadioButton_Book" Content="Book" HorizontalAlignment="Left" Margin="224,45,0,0" VerticalAlignment="Top"/>
         <RadioButton x:Name="RadioButton_Newspaper" Content="Newspaper" HorizontalAlignment="Left" Margin="302,45,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="TextBox_Search" HorizontalAlignment="Left" Height="23" Margin="428,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
-        <Button x:Name="Button_Search" Content="Search" HorizontalAlignment="Left" Margin="685,45,0,0" VerticalAlignment="Top" Width="82" Height="21"/>
+        <Button x:Name="Button_Search" Content="Search" HorizontalAlignment="Left" Margin="685,45,0,0" VerticalAlignment="Top" Width="82" Height="21" Click="Button_Search_Click"/>
         <ListBox x:Name="ListBox_Ausgabe" HorizontalAlignment="Left" Height="241" Margin="428,112,0,0" VerticalAlignment="Top" Width="339"/>
         <Label Content="Title: " HorizontalAlignment="Left" Margin="29,100,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="TextBox_Title" HorizontalAlignment="Left" Height="22" Margin="111,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207"/>
