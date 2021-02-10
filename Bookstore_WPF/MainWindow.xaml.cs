@@ -248,16 +248,52 @@ namespace Bookstore_WPF
         {
             string suche = TextBox_Search.Text.ToLower();
 
-            if ((suche == " " || suche == "") && RadioButton_All.IsChecked == true)
+            List<Item> ListeSuchen = new List<Item>() { };
+
+
+           
+            if(RadioButton_Book.IsChecked == true)
             {
-
+                ListBox_Ausgabe.Items.Clear();
+                foreach (var xy in ListeItems)
+                {
+                    if (xy is Book && xy.ToString().ToLower().Contains(suche))
+                    {
+                        ListeSuchen.Add(xy);
+                    }
+                   
+                }
             }
-            else if(RadioButton_Book.IsChecked == true)
+            else if (RadioButton_Audiobook.IsChecked == true)
             {
-
+                ListBox_Ausgabe.Items.Clear();
+                foreach (var xy in ListeItems)
+                {
+                    if (xy.GetType() == typeof(AudioBook) && xy.ToString().ToLower().Contains(suche))
+                    {
+                        ListeSuchen.Add(xy);
+                    }
+                }
+            }
+            else if (RadioButton_Newspaper.IsChecked == true)
+            {
+                ListBox_Ausgabe.Items.Clear();
+                foreach (var xy in ListeItems)
+                {
+                    if (xy.GetType() == typeof(Newspaper) && xy.ToString().ToLower().Contains(suche))
+                    {
+                        ListeSuchen.Add(xy);
+                    }
+                }
             }
 
-            
+
+            foreach (var item in ListeSuchen)
+            {
+                ListBox_Ausgabe.Items.Add(item);
+            }
+
+
         }
     }
 }
